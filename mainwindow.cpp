@@ -1,15 +1,46 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+//QT中的printf
+#include <qdebug.h>
+
 //构造函数  MainWindow 类名   MainWindow构造函数名    QMainWindow  参数列表 （父类）   ui （界面）
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    ui->small->setText("nihaoa");
+
+    QStringList::iterator head;
+    QString path = "/home/bbigq/workspace/QT/build-QtFirstExp-Desktop_Qt_5_13_2_GCC_64bit-Debug/QtFirstExp";
+    QStringList duanList = path.split("/");
+
+    for(head = duanList.begin(); head != duanList.end(); head++)
+    {
+        head->remove("e");
+        qDebug() << *head;
+    }
+
+//    //创建一个新的标签
+//    QLabel *label2;          //标签
+//    label2 = new QLabel(this);
+//    label2->setObjectName(QString::fromUtf8("label"));
+//    label2->setGeometry(QRect(100, 100, 321, 101));
+
+//    //设置字体
+//    QFont font;
+//    font.setPointSize(30);
+//    label2->setFont(font);
+
+//    label2->setText(QCoreApplication::translate("MainWindow", "啊～～～～", nullptr));
+
 }
 
 MainWindow::~MainWindow()
 {
-    //mas
+
+
+
     delete ui;
 }
 
