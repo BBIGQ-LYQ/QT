@@ -15,7 +15,7 @@ LEARN QT
 
 高亮 `高亮`
 
-[我的GitHub](https://github.com/BBIGQ-LYQ "悬停显示")
+*[我的GitHub](https://github.com/BBIGQ-LYQ "悬停显示")
 
 *圆点：果冻虾仁
 
