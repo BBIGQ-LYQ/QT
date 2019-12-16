@@ -9,17 +9,27 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
 {
     ui->setupUi(this);
 
-    ui->small->setText("nihaoa");
+    int num1, num2, sum;
+    num1 = ui->laber_num1->text().toInt();
+    num2 = ui->label_num2->text().toInt();
 
-    QStringList::iterator head;
-    QString path = "/home/bbigq/workspace/QT/build-QtFirstExp-Desktop_Qt_5_13_2_GCC_64bit-Debug/QtFirstExp";
-    QStringList duanList = path.split("/");
+    sum = num1 + num2;
 
-    for(head = duanList.begin(); head != duanList.end(); head++)
-    {
-        head->remove("e");
-        qDebug() << *head;
-    }
+    ui->label_sum->setText(QString::number(sum));
+
+//    int a = 10086;
+//    QString aa = QString::number(a);
+//    ui->small->setText(aa);
+
+//    QStringList::iterator head;
+//    QString path = "/home/bbigq/workspace/QT/build-QtFirstExp-Desktop_Qt_5_13_2_GCC_64bit-Debug/QtFirstExp";
+//    QStringList duanList = path.split("/");
+
+//    for(head = duanList.begin(); head != duanList.end(); head++)
+//    {
+//        head->remove("e");
+//        qDebug() << *head;
+//    }
 
 //    //创建一个新的标签
 //    QLabel *label2;          //标签
